@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles_1.css">
     <script src="script.js" defer></script>
     <title>Quiz</title>
+    <style>
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        li {
+            display: inline; 
+            margin-right: 10px;
+            background-color: #f6d7f6;
+            padding: 5px 10px;
+            border-radius:10px;
+        }
+
+        li:hover {
+            background-color: #f5c3f5;    
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover, .dropbtn:hover {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Quiz - Grade 1</h1>
         <nav>
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="signup.html">Sign up to save your progress</a></li>
                 <li class="dropdown">
-                    <a href="#">Resources</a>
+                    <button class="dropbtn">Resources</button>
                     <div class="dropdown-content">
-                        <a href="#">Study Guide</a>
-                        <a href="#">Sample Questions</a>
-                        <a href="#">Feedback</a>
+                        <a href="study_guide.html">Study Guide</a>
+                        <a href="sample_questions.html">Practice Exam</a>
+                        <a href="old_exams.html">Past Exams</a>
                     </div>
                 </li>
             </ul>
@@ -40,28 +65,24 @@
                 <tr>
                     <td>Kangaroo</td>
                     <td>Australia</td>
-                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe2mkopXvU_Z9mP5GeQQsBMxC0jFl9VEmyFJ_1-wT-ZDs5-eAuIAUu2SZNaOu51MJDkTg&usqp=CAU" alt="Kangaroo Image" width="100"></td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe2mkopXvU_Z9mP5GeQQsBMxC0jFl9VEmyFJ_1-wT-ZDs5-eAuIAUu2SZNaOu51MJDkTg&usqp=CAU" alt="Hamster Image" width="100"></td>
                 </tr>
             </tbody>
         </table>
 
         <h2>Questions</h2>
         <form id="quiz-form">
-            <label for="student-name">Name:</label>
-            <input type="text" id="student-name" name="student_name" required>
-            <label for="student-email">Email:</label>
-            <input type="email" id="student-email" name="student_email" required>
-
+            
             <p>Based on the information table, answer the following questions:</p>
             <p><strong>1. Which country is the Kangaroo native to?</strong></p>
             <label>
-                <input type="radio" name="q1" value="Australia"> Australia
+                <input type="radio" name="q1" value="Australia" required> Australia
                 <input type="radio" name="q1" value="United States"> United States
                 <input type="radio" name="q1" value="Germany"> Germany
             </label>
             <p><strong>2. Check the animals you recognize:</strong></p>
             <label>
-                <input type="checkbox" name="q2" value="Kangaroo"> Kangaroo
+                <input type="checkbox" name="q2" value="Kangaroo" required> Kangaroo
                 <input type="checkbox" name="q2" value="Hamster"> Hamster
                 <input type="checkbox" name="q2" value="Raccoon"> Raccoon
             </label>
@@ -70,13 +91,13 @@
             <br>
             <textarea name="q3" rows="4" required></textarea>
             <p><strong>4. Based on the table, which countries are mentioned?</strong></p>
-            <select name="q6">
+            <select name="q4" style="font-size: 16px;">
                 <option value="australia">Australia</option>
                 <option value="usa">USA</option>
                 <option value="canada">Canada</option>
             </select>
             <br>
-            <input type="submit" value="Submit Quiz">
+            <button id="submit-btn">Submit Quiz</button>
         </form>
         <p>Congrats! You finished your quiz!</p>
         <img src="https://media.tenor.com/qaaxNqInrHoAAAAM/bunny-dance.gif" alt="bunny gif">
