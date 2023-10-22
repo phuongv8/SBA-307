@@ -39,13 +39,13 @@
         <h1>Quiz - Grade 1</h1>
         <nav>
             <ul>
-                <li><a href="signup.html">Sign up to save your progress</a></li>
+                <li><a href="pages/signup.html">Sign up to save your progress</a></li>
                 <li class="dropdown">
                     <button class="dropbtn">Resources</button>
                     <div class="dropdown-content">
-                        <a href="study_guide.html">Study Guide</a>
-                        <a href="sample_questions.html">Practice Exam</a>
-                        <a href="old_exams.html">Past Exams</a>
+                        <a href="pages/study_guide.html">Study Guide</a>
+                        <a href="pages/sample_questions.html">Practice Exam</a>
+                        <a href="pages/old_exams.html">Past Exams</a>
                     </div>
                 </li>
             </ul>
@@ -65,7 +65,10 @@
                 <tr>
                     <td>Kangaroo</td>
                     <td>Australia</td>
-                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe2mkopXvU_Z9mP5GeQQsBMxC0jFl9VEmyFJ_1-wT-ZDs5-eAuIAUu2SZNaOu51MJDkTg&usqp=CAU" alt="Hamster Image" width="100"></td>
+                    <td><img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Macropus_giganteus_-_Brunkerville.jpg/800px-Macropus_giganteus_-_Brunkerville.jpg" 
+                        alt="Kangaroo Image" 
+                        width="100"></td>
                 </tr>
             </tbody>
         </table>
@@ -89,15 +92,17 @@
             <p><strong>3. Watch the video and describe the habitat of Rabbits:</strong></p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/DU7XJTFm5Y4?si=DUsUyDndDEIWtZJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <br>
-            <textarea name="q3" rows="4" required></textarea>
-            <p><strong>4. Based on the table, which countries are mentioned?</strong></p>
-            <select name="q4" style="font-size: 16px;">
+            <textarea id="q3" name="q3" rows="4" required></textarea>
+            <p><strong>4. Based on the table, which country is mentioned?</strong></p>
+            <select name="q4" required style="font-size: 16px;">
                 <option value="australia">Australia</option>
                 <option value="usa">USA</option>
                 <option value="canada">Canada</option>
             </select>
             <br>
             <button id="submit-btn">Submit Quiz</button>
+            <div id="error-message" style="visibility: hidden; color: red; display: inline-block; margin-left: 34px;">Please answer all questions before submitting.</div>
+
         </form>
         <p>Congrats! You finished your quiz!</p>
         <img src="https://media.tenor.com/qaaxNqInrHoAAAAM/bunny-dance.gif" alt="bunny gif">
